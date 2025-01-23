@@ -1,0 +1,33 @@
+module:
+  general:
+    name: Language
+    description: Handle messages for each module
+    capabilities: |
+      * show issuer's language
+      * list available languages
+      * change player's messages language
+      * load language configs on demand, by default english is the only one loaded
+    notes:
+      command-arguments: |
+        - "[argument]" means the argument is mandatory
+        - "{argument}" means the argument is optional
+
+  commands:
+    - name: language
+      aliases: [lang]
+      implemented: true
+      description: Set prefered language for messages
+      usage:
+        command: /language [info|list|language-id]
+        arguments:
+          info: display issuer's language
+          list: list all available languages
+          language-id: change issuer's language to selected one from the list
+
+  components:
+    - name: LanguageManager
+      description: Main component
+
+  events:
+    - name: LanguageChangeEvent
+      description: Triggered when a player changes its language

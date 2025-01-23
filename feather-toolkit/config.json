@@ -1,0 +1,52 @@
+{
+  "project": "FeatherToolkit",
+  "headers": {
+    "java": [
+      "/**",
+      " * ----------------------------------------------------------------------------- *",
+      " *                     Copyright (c) by FeatherToolkit 2025                      *",
+      " * ----------------------------------------------------------------------------- *",
+      " * @license https://github.com/TheAncientOwl/feather-toolkit/blob/main/LICENSE",
+      " *",
+      " * @file $FILE_NAME",
+      " * @author Alexandru Delegeanu",
+      " * @version 0.1",
+      " * @description @TODO: add description",
+      " */",
+      ""
+    ],
+    "java-test": [
+      "/**",
+      " * ----------------------------------------------------------------------------- *",
+      " *                     Copyright (c) by FeatherToolkit 2025                      *",
+      " * ----------------------------------------------------------------------------- *",
+      " * @license https://github.com/TheAncientOwl/feather-toolkit/blob/main/LICENSE",
+      " *",
+      " * @file $FILE_NAME",
+      " * @author Alexandru Delegeanu",
+      " * @version 0.1",
+      " * @test_unit $NON_TEST_BASE_FILE_NAME#version",
+      " * @description Unit tests for $NON_TEST_BASE_FILE_NAME",
+      " */",
+      ""
+    ]
+  },
+  "commands": {
+    "configure": {
+      "clean": ["mvn", "eclipse:clean", "-f", "pom.xml", "-Dstyle.color=always"],
+      "eclipse": ["mvn", "eclipse:eclipse", "-f", "pom.xml", "-Dstyle.color=always"]
+    },
+    "install": ["mvn", "clean", "package", "shade:shade", "-Dstyle.color=always"],
+    "install-verbose": ["mvn", "clean", "package", "shade:shade", "-X", "-Dstyle.color=always"],
+    "coverage": ["mvn", "clean", "jacoco:prepare-agent", "install", "jacoco:report", "-Dstyle.color=always"],
+    "test": {
+      "all": ["mvn", "test", "-Dstyle.color=always"],
+      "package": ["mvn", "-Dtest=$TEST_NAME", "test", "-Dstyle.color=always"]
+    },
+    "run": {
+      "pre": [],
+      "post": []
+    }
+  },
+  "coverage-resources-path": ["project", "coverage", "resources"]
+}

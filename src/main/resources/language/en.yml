@@ -1,0 +1,25 @@
+general:
+  no-permission: '&8[&eFeather&3Toolkit&8] &cYou do not have permission to do that&8.'
+  command:
+    no-permission: '&8[&eFeather&3Toolkit&8] &cYou do not have permission to use that&8.'
+    invalid: '&8[&eFeather&3Toolkit&8] &cInvalid command usage&8.'
+    players-only: '&8[&eFeather&3Toolkit&8] &cThat command can be issued by players only&8.'
+  not-player: '&8[&eFeather&3Toolkit&8] &c{string} is not a player&8.'
+  not-online-player: '&8[&eFeather&3Toolkit&8] &c{player} is not online&8.'
+  not-valid-world: '&8[&eFeather&3Toolkit&8] &c{string} is not a world&8.'
+  not-valid-number: '&8[&eFeather&3Toolkit&8] &c{string} is not a valid number&8!'
+  invalid-value: '&8[&eFeather&3Toolkit&8] &7Invalid value &c"{string}"&8.'
+  world-no-longer-available: '&8[&eFeather&3Toolkit&8] &7World &2{world} &7is no longer available&8!'
+
+language:
+  usage: '&8[&6Usage&8] &e/language info/list/[language]'
+  change-success: '&8[&6Language&8] &eChanged successfully&8!'
+  unknown: '&8[&4Language&8] &cInvalid value&8!'
+  info: '&8[&6Language&8] &e{language}&8.'
+  list: '&8[&6Language&8] &7Available languages&8: &e{language}&8.'
+
+configuration:
+  usage: '&8[&6Usage&8] &e/feather-reload {string}'
+  reload:
+    single: '&8[&6Feather&3Toolkit&8] &aConfiguration reloaded&8!'
+    multiple: '&8[&6Feather&3Toolkit&8] &aConfigurations reloaded&8!'

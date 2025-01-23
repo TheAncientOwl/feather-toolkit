@@ -1,0 +1,34 @@
+modules:
+  LanguageManager:
+    class: dev.defaultybuf.feather.toolkit.core.modules.language.components.LanguageManager
+    interfaces:
+      - dev.defaultybuf.feather.toolkit.core.modules.language.interfaces.ILanguage
+    dependencies: [PlayersData]
+    mandatory: true
+    config: language/config.yml
+    commands:
+      language: dev.defaultybuf.feather.toolkit.core.modules.language.commands.LanguageCommand
+    listeners: []
+
+  PlayersData:
+    class: dev.defaultybuf.feather.toolkit.core.modules.language.components.DefaultLanguageStorageModule
+    interfaces:
+      - dev.defaultybuf.feather.toolkit.api.interfaces.IPlayerLanguageAccessor
+      - dev.defaultybuf.feather.toolkit.core.modules.language.components.DefaultLanguageStorageModule
+    dependencies: []
+    mandatory: true
+    config: language/default-storage.yml
+    commands: []
+    listeners:
+      - dev.defaultybuf.feather.toolkit.core.modules.language.listeners.DefaultLanguageHandlerListener
+
+  ReloadModule:
+    class: dev.defaultybuf.feather.toolkit.core.modules.reload.components.ReloadModule
+    interfaces:
+      - dev.defaultybuf.feather.toolkit.core.modules.reload.interfaces.IReloadModule
+    dependencies: []
+    mandatory: true
+    config: null
+    commands:
+      feather-reload: dev.defaultybuf.feather.toolkit.core.modules.reload.commands.ReloadCommand
+    listeners: []

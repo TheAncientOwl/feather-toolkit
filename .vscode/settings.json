@@ -1,0 +1,37 @@
+{
+  "files.autoGuessEncoding": true,
+  "files.encoding": "utf8",
+
+  "java.jdt.ls.java.home": "/usr/lib/jvm/java-21-openjdk-amd64",
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Dfile.encoding=UTF-8 -Xmx1G -Xms100m -Xlog:disable",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.format.settings.url": "project/eclipse-java-google-style.xml",
+  "java.format.settings.profile": "GoogleStyle",
+
+  "material-icon-theme.folders.customClones": [
+    {
+      "name": "mojo-red",
+      "base": "mojo",
+      "color": "red-900",
+      "folderNames": ["feathercore", "defaultybuf", "feather"]
+    },
+    {
+      "name": "toolkit-red",
+      "base": "helper",
+      "color": "blue-700",
+      "folderNames": ["feather-toolkit"]
+    }
+  ],
+  "material-icon-theme.files.associations": {
+    "NOTICE": "certificate"
+  },
+  "material-icon-theme.folders.associations": {
+    "minecraft": "node",
+    "exceptions": "private",
+    "configuration": "json",
+    "config": "json",
+    "bukkit": "azure-pipelines",
+    "boilerplate": "interface"
+  }
+}

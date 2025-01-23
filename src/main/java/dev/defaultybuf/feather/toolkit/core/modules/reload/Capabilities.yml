@@ -1,0 +1,26 @@
+module:
+  general:
+    name: Reload
+    description: Reload module configuration
+    capabilities: |
+      Reload configuration of all modules or per module
+    notes:
+      command-arguments: |
+        - "[argument]" means the argument is mandatory
+        - "{argument}" means the argument is optional
+
+  commands:
+    - name: feather-reload
+      aliases: [fcreload]
+      implemented: true
+      description: Reload configuration of all modules or per module
+      usage: /feather-reload [all|module-name]
+      arguments:
+        all: reloads all modules
+        module-name: reloads one specific module
+      permissions:
+        - name: featherplugin.reload
+
+  components:
+    - name: ReloadModule
+      description: Main component

@@ -1,0 +1,18 @@
+name: FeatherToolkit
+version: 0.0.1
+main: dev.defaultybuf.feather.toolkit.core.FeatherPlugin
+author: DefaultyBuf
+description: Toolkit for server bukkit/spigot/paper servers
+
+api-version: 1.21.1
+
+commands:
+  language:
+    description: Set prefered language for messages
+    usage: /language info/list/[language]
+    aliases: [lang]
+
+  feather-reload:
+    description: Reload configurations
+    usage: /feather-reload {MODULE}
+    aliases: [fcreload]
