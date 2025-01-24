@@ -6,7 +6,7 @@
  *
  * @file ReloadModuleTest.java
  * @author Alexandru Delegeanu
- * @version 0.9
+ * @version 0.10
  * @test_unit ReloadModule#0.4
  * @description Unit tests for ReloadModule
  */
@@ -17,8 +17,8 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 import org.junit.jupiter.api.Test;
 
-import dev.defaultybuf.feather.toolkit.testing.mockers.FeatherModuleTest;
-import dev.defaultybuf.feather.toolkit.testing.mockers.FeatherToolkitDependencyFactory;
+import dev.defaultybuf.feather.toolkit.testing.core.FeatherModuleTest;
+import dev.defaultybuf.feather.toolkit.testing.core.FeatherToolkitDependencyFactory;
 
 class ReloadModuleTest extends FeatherModuleTest<ReloadModule> {
 

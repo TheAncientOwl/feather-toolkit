@@ -11,7 +11,7 @@
  *              and inject them into test dependencies maps
  */
 
-package dev.defaultybuf.feather.toolkit.testing.mockers;
+package dev.defaultybuf.feather.toolkit.testing.core;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.lenient;
@@ -33,8 +33,8 @@ import dev.defaultybuf.feather.toolkit.core.modules.language.components.Language
 import dev.defaultybuf.feather.toolkit.core.modules.language.interfaces.ILanguage;
 import dev.defaultybuf.feather.toolkit.core.modules.reload.components.ReloadModule;
 import dev.defaultybuf.feather.toolkit.core.modules.reload.interfaces.IReloadModule;
-import dev.defaultybuf.feather.toolkit.testing.annotations.DependencyFactory;
-import dev.defaultybuf.feather.toolkit.testing.annotations.Resource;
+import dev.defaultybuf.feather.toolkit.testing.core.annotations.DependencyFactory;
+import dev.defaultybuf.feather.toolkit.testing.core.annotations.Resource;
 import dev.defaultybuf.feather.toolkit.testing.utils.TempFile;
 import dev.defaultybuf.feather.toolkit.testing.utils.TempModule;
 import dev.defaultybuf.feather.toolkit.testing.utils.TestUtils;

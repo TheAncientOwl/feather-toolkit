@@ -6,7 +6,7 @@
  *
  * @file LanguageCommandTest.java
  * @author Alexandru Delegeanu
- * @version 0.19
+ * @version 0.20
  * @test_unit LanguageCommand#0.9
  * @description Unit tests for LanguageCommand
  */
@@ -53,9 +53,9 @@ import dev.defaultybuf.feather.toolkit.core.modules.language.components.Language
 import dev.defaultybuf.feather.toolkit.core.modules.language.components.LanguageManagerTest;
 import dev.defaultybuf.feather.toolkit.core.modules.language.events.LanguageChangeEvent;
 import dev.defaultybuf.feather.toolkit.core.modules.language.interfaces.ILanguage;
-import dev.defaultybuf.feather.toolkit.testing.annotations.ActualModule;
-import dev.defaultybuf.feather.toolkit.testing.annotations.Resource;
-import dev.defaultybuf.feather.toolkit.testing.mockers.FeatherCommandTest;
+import dev.defaultybuf.feather.toolkit.testing.core.FeatherCommandTest;
+import dev.defaultybuf.feather.toolkit.testing.core.annotations.ActualModule;
+import dev.defaultybuf.feather.toolkit.testing.core.annotations.Resource;
 import dev.defaultybuf.feather.toolkit.testing.utils.TempModule;
 import dev.defaultybuf.feather.toolkit.testing.utils.TestUtils;
 import dev.defaultybuf.feather.toolkit.util.java.Pair;

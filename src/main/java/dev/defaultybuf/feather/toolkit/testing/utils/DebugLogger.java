@@ -9,7 +9,7 @@
  * @version 0.3
  * @description Debug logger utility, not intended for production usage
  */
-package dev.defaultybuf.feather.toolkit.testing;
+package dev.defaultybuf.feather.toolkit.testing.utils;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

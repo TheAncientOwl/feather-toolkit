@@ -9,7 +9,8 @@
  * @version 0.3
  * @description Utility class for developing listeners unit tests that use modules
  */
-package dev.defaultybuf.feather.toolkit.testing.mockers;
+
+package dev.defaultybuf.feather.toolkit.testing.core;
 
 import java.lang.reflect.InvocationTargetException;
 
