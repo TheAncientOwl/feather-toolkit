@@ -36,8 +36,16 @@
       "clean": ["mvn", "eclipse:clean", "-f", "pom.xml", "-Dstyle.color=always"],
       "eclipse": ["mvn", "eclipse:eclipse", "-f", "pom.xml", "-Dstyle.color=always"]
     },
-    "install": ["mvn", "clean", "package", "shade:shade", "-Dstyle.color=always"],
-    "install-verbose": ["mvn", "clean", "package", "shade:shade", "-X", "-Dstyle.color=always"],
+    "install": ["mvn", "clean", "package", "shade:shade", "-Dmaven.test.skip=true", "-Dstyle.color=always"],
+    "install-verbose": [
+      "mvn",
+      "clean",
+      "package",
+      "shade:shade",
+      "-X",
+      "-Dmaven.test.skip=true",
+      "-Dstyle.color=always"
+    ],
     "coverage": ["mvn", "clean", "jacoco:prepare-agent", "install", "jacoco:report", "-Dstyle.color=always"],
     "test": {
       "all": ["mvn", "test", "-Dstyle.color=always"],
