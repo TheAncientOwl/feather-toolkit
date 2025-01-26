@@ -56,5 +56,6 @@
       "post": []
     }
   },
-  "coverage-resources-path": ["project", "coverage", "resources"]
+  "coverage-resources-path": ["project", "coverage", "resources"],
+  "clean-paths": ["target/.*FeatherToolkit.*", "dev/server/plugins/FeatherToolkit.*"]
 }
