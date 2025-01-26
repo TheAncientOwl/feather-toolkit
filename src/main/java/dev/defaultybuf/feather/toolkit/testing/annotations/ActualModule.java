@@ -4,14 +4,12 @@
  * ----------------------------------------------------------------------------- *
  * @license https://github.com/TheAncientOwl/feather-toolkit/blob/main/LICENSE
  *
- * @file InjectDependencies.java
+ * @file ActualModule.java
  * @author Alexandru Delegeanu
- * @version 0.1
- * @description Test annotation to specify which provider to use 
- *              while getting mocked/actual module dependencies
+ * @version 0.4
+ * @description Marker annotation for actual modules, used for testing
  */
-
-package dev.defaultybuf.feather.toolkit.testing.core.annotations;
+package dev.defaultybuf.feather.toolkit.testing.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -19,7 +17,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
-public @interface InjectDependencies {
-    Class<?>[] factories();
+@Target(ElementType.FIELD)
+public @interface ActualModule {
+    Class<?> of();
+
+    Resource[] resources();
 }

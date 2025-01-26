@@ -10,7 +10,7 @@
  * @description Utility class for developing unit tests that use modules
  */
 
-package dev.defaultybuf.feather.toolkit.testing.core;
+package dev.defaultybuf.feather.toolkit.testing;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.lenient;
@@ -34,13 +34,12 @@ import dev.defaultybuf.feather.toolkit.api.interfaces.IEnabledModulesProvider;
 import dev.defaultybuf.feather.toolkit.api.interfaces.IFeatherLogger;
 import dev.defaultybuf.feather.toolkit.api.interfaces.IPlayerLanguageAccessor;
 import dev.defaultybuf.feather.toolkit.core.modules.language.interfaces.ILanguage;
-import dev.defaultybuf.feather.toolkit.testing.core.FeatherToolkitDependencyFactory.DependencyHelper;
-import dev.defaultybuf.feather.toolkit.testing.core.annotations.ActualModule;
-import dev.defaultybuf.feather.toolkit.testing.core.annotations.DependencyFactory;
-import dev.defaultybuf.feather.toolkit.testing.core.annotations.InjectDependencies;
-import dev.defaultybuf.feather.toolkit.testing.core.annotations.MockedModule;
-import dev.defaultybuf.feather.toolkit.testing.core.annotations.Resource;
-import dev.defaultybuf.feather.toolkit.testing.core.annotations.StaticMock;
+import dev.defaultybuf.feather.toolkit.testing.annotations.ActualModule;
+import dev.defaultybuf.feather.toolkit.testing.annotations.DependencyFactory;
+import dev.defaultybuf.feather.toolkit.testing.annotations.InjectDependencies;
+import dev.defaultybuf.feather.toolkit.testing.annotations.MockedModule;
+import dev.defaultybuf.feather.toolkit.testing.annotations.Resource;
+import dev.defaultybuf.feather.toolkit.testing.annotations.StaticMock;
 import dev.defaultybuf.feather.toolkit.testing.utils.TestUtils;
 import dev.defaultybuf.feather.toolkit.util.java.Pair;
 

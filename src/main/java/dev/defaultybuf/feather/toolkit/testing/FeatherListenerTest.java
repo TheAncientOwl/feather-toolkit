@@ -10,7 +10,7 @@
  * @description Utility class for developing listeners unit tests that use modules
  */
 
-package dev.defaultybuf.feather.toolkit.testing.core;
+package dev.defaultybuf.feather.toolkit.testing;
 
 import java.lang.reflect.InvocationTargetException;
 

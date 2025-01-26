@@ -6,7 +6,7 @@
  *
  * @file FeatherModuleHiddenTest.java
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @test_unit FeatherModuleHidden#0.6
  * @description Unit tests for FeatherModuleHidden
  */
@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 
 import dev.defaultybuf.feather.toolkit.api.dummies.DummyModule;
 import dev.defaultybuf.feather.toolkit.api.interfaces.IFeatherLogger;
-import dev.defaultybuf.feather.toolkit.testing.core.FeatherModuleTest;
+import dev.defaultybuf.feather.toolkit.testing.FeatherModuleTest;
 
 class FeatherModuleHiddenTest extends FeatherModuleTest<DummyModule> {
 

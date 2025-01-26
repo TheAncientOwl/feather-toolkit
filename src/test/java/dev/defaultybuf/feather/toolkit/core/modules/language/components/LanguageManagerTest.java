@@ -6,7 +6,7 @@
  *
  * @file LanguageManagerTest.java
  * @author Alexandru Delegeanu
- * @version 0.16
+ * @version 0.17
  * @test_unit LanguageManager#0.8
  * @description Unit tests for LanguageManager
  */
@@ -34,8 +34,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 
-import dev.defaultybuf.feather.toolkit.testing.core.FeatherModuleTest;
-import dev.defaultybuf.feather.toolkit.testing.core.FeatherToolkitDependencyFactory;
+import dev.defaultybuf.feather.toolkit.testing.FeatherModuleTest;
+import dev.defaultybuf.feather.toolkit.testing.FeatherToolkitDependencyFactory;
 import dev.defaultybuf.feather.toolkit.testing.utils.TestUtils;
 import dev.defaultybuf.feather.toolkit.util.java.Pair;
 
