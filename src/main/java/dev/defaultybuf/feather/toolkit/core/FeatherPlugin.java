@@ -6,7 +6,7 @@
  *
  * @file FeatherPlugin.java
  * @author Alexandru Delegeanu
- * @version 0.7
+ * @version 0.8
  * @description Plugin entry point
  */
 
@@ -38,7 +38,13 @@ public class FeatherPlugin extends JavaPlugin implements IEnabledModulesProvider
         final var enableStartTime = Clock.currentTimeMillis();
 
         try {
-            this.featherLogger = new FeatherLogger(this.getServer().getConsoleSender());
+            this.featherLogger = new FeatherLogger(this);
+
+            this.featherLogger.info("Info message");
+            this.featherLogger.warn("Warn message");
+            this.featherLogger.error("Error message");
+            this.featherLogger.debug("Debug message");
+
             this.modulesManager.onEnable(this);
 
             final var enableFinishTime = Clock.currentTimeMillis();

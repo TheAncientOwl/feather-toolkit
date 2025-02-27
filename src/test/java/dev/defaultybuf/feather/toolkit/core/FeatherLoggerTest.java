@@ -6,17 +6,22 @@
  *
  * @file FeatherLoggerTest.java
  * @author Alexandru Delegeanu
- * @version 0.2
- * @test_unit FeatherLogger#0.3
+ * @version 0.3
+ * @test_unit FeatherLogger#0.4
  * @description Unit tests for FeatherLogger
  */
 
 package dev.defaultybuf.feather.toolkit.core;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
-import org.bukkit.command.ConsoleCommandSender;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.bukkit.plugin.java.JavaPlugin;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,14 +31,16 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 class FeatherLoggerTest {
-    @Mock ConsoleCommandSender mockConsole;
+    @Mock JavaPlugin mockPlugin;
+    @Mock Logger mockLogger;
 
     FeatherLogger featherLogger;
     ArgumentCaptor<String> messageCaptor;
 
     @BeforeEach
     void setUp() {
-        featherLogger = new FeatherLogger(mockConsole);
+        when(mockPlugin.getLogger()).thenReturn(mockLogger);
+        featherLogger = new FeatherLogger(mockPlugin);
         messageCaptor = ArgumentCaptor.forClass(String.class);
     }
 
@@ -42,7 +49,7 @@ class FeatherLoggerTest {
         var message = "Info message";
         featherLogger.info(message);
 
-        verify(mockConsole).sendMessage(messageCaptor.capture());
+        verify(mockLogger).log(eq(Level.INFO), messageCaptor.capture());
         assertTrue(messageCaptor.getValue().contains(message));
     }
 
@@ -51,7 +58,7 @@ class FeatherLoggerTest {
         var message = "Warn message";
         featherLogger.warn("Warn message");
 
-        verify(mockConsole).sendMessage(messageCaptor.capture());
+        verify(mockLogger).log(eq(Level.WARNING), messageCaptor.capture());
         assertTrue(messageCaptor.getValue().contains(message));
     }
 
@@ -60,7 +67,7 @@ class FeatherLoggerTest {
         var message = "Error message";
         featherLogger.error("Error message");
 
-        verify(mockConsole).sendMessage(messageCaptor.capture());
+        verify(mockLogger).log(eq(Level.SEVERE), messageCaptor.capture());
         assertTrue(messageCaptor.getValue().contains(message));
     }
 
@@ -69,7 +76,7 @@ class FeatherLoggerTest {
         var message = "Debug message";
         featherLogger.debug("Debug message");
 
-        verify(mockConsole).sendMessage(messageCaptor.capture());
+        verify(mockLogger).log(eq(Level.INFO), messageCaptor.capture());
         assertTrue(messageCaptor.getValue().contains(message));
     }
 
