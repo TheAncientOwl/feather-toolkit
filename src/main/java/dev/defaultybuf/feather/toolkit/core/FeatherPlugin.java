@@ -40,11 +40,6 @@ public class FeatherPlugin extends JavaPlugin implements IEnabledModulesProvider
         try {
             this.featherLogger = new FeatherLogger(this);
 
-            this.featherLogger.info("Info message");
-            this.featherLogger.warn("Warn message");
-            this.featherLogger.error("Error message");
-            this.featherLogger.debug("Debug message");
-
             this.modulesManager.onEnable(this);
 
             final var enableFinishTime = Clock.currentTimeMillis();
