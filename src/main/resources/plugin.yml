@@ -1,5 +1,5 @@
 name: FeatherToolkit
-version: 1.0.1
+version: 1.0.2
 main: dev.defaultybuf.feather.toolkit.core.FeatherPlugin
 author: DefaultyBuf
 description: Toolkit for server bukkit/spigot/paper servers
